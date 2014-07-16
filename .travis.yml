@@ -5,7 +5,7 @@ perl:
 install: 
 - sudo apt-get update -qq
 - sudo apt-get install -y openssl libcppunit-dev libreadline6 libreadline6-dev valgrind realpath libmodule-install-perl
-script: "make && make test-fast && make perl"
+script: "make && make test-fast && make perl && make ruby"
 notifications:
   irc:
     - "irc.freenode.net#mdbm"

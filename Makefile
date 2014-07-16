@@ -29,7 +29,10 @@ doc:
 perl: default
 	(cd src/perl; $(PERL) Makefile.PL INSTALL_BASE=$(PERL_PREFIX) && make && make test)
 
-all: default perl doc
+ruby: default
+	(cd src/ruby; export LD_LIBRARY_PATH="$(TOPDIR)/src/lib/$(OBJDIR):$(LD_LIBRARY_PATH)"; bundle install; bundle exec ruby ./mdbm.rb)
+
+all: default perl ruby doc
 
 install-all: all install
 	make -C gendoc install
