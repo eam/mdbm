@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 # just a demo
 # needs a new name, "mdbm" is taken by a gem already
 
@@ -47,7 +47,7 @@ class Mdbm
   # extern int mdbm_delete_str(MDBM *db, const char *key);
   attach_function 'mdbm_delete_str', [:pointer, :string], :int
 
-  def initialize
+  def initialize(file, flags, mode, psize, presize)
   end
 
 end

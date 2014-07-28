@@ -30,7 +30,7 @@ perl: default
 	(cd src/perl; $(PERL) Makefile.PL INSTALL_BASE=$(PERL_PREFIX) && make && make test)
 
 ruby: default
-	(cd src/ruby; export LD_LIBRARY_PATH="$(TOPDIR)/src/lib/$(OBJDIR):$(LD_LIBRARY_PATH)"; bundle install; bundle exec ruby ./mdbm.rb)
+	(cd src/ruby; export LD_LIBRARY_PATH="$(TOPDIR)/src/lib/$(OBJDIR):$(LD_LIBRARY_PATH)"; bundle install; bundle exec ruby lib/mdbm.rb)
 
 all: default perl ruby doc
 
