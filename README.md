@@ -21,6 +21,12 @@ See the [documentation](http://yahoo.github.io/mdbm/) for more details.
 
 Join the [mailing list](https://groups.yahoo.com/groups/mdbm-users/) to discuss MDBM.
 
+Related modules
+------------
+
+ * Ruby gem: https://github.com/eam/ruby-mdbm https://rubygems.org/gems/mdbm
+ * Go module: https://github.com/eam/go-mdbm
+
 
 build status
 ------------
